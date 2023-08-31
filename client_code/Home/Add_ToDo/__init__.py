@@ -1,16 +1,12 @@
-from ._anvil_designer import HomeTemplate
+from ._anvil_designer import Add_ToDoTemplate
 from anvil import *
-import anvil.server
 import anvil.tables as tables
 import anvil.tables.query as q
 from anvil.tables import app_tables
 
-class Home(HomeTemplate):
+class Add_ToDo(Add_ToDoTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-
-  def button_add_todo_click(self, **event_args):
-    open_form('Home.Add_ToDo')
