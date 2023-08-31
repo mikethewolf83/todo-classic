@@ -1,7 +1,30 @@
+services:
+- source: /runtime/services/tables.yml
+  client_config: {}
+  server_config: {}
+startup: {type: form, module: Home}
+package_name: ToDo_Classic
 allow_embedding: false
-package_name: Material_Design_1
-name: Material Design 1
-startup_form: Form1
+name: ToDo Classic
 runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
   server_spec: null}
-services: []
+metadata: {title: ToDo Classic, description: Classic ToDo App, logo_img: 'https://fonts.gstatic.com/s/i/materialiconsoutlined/check_circle/v19/24px.svg'}
+startup_form: null
+db_schema:
+  todos:
+    client: none
+    server: full
+    columns:
+    - name: id
+      type: string
+      admin_ui: {width: 200, order: 0}
+    - name: todo_name
+      type: string
+      admin_ui: {width: 200, order: 1}
+    - name: todo_description
+      type: string
+      admin_ui: {width: 200, order: 2}
+    - name: todo_is_completed
+      type: bool
+      admin_ui: {width: 200, order: 3}
+    title: Table 1
